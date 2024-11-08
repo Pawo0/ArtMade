@@ -8,11 +8,11 @@ menuBtn.addEventListener('click', () => {
 const slide = document.querySelector('.slides')
 const slides = document.querySelectorAll('.slide');
 const btns = document.querySelectorAll('.slides button');
-const displaySlide = document.getElementsByClassName('displaySlide')
+const displaySlide = Array.from(document.getElementsByClassName('displaySlide'));
 const displayImg = document.getElementById('displayImg')
 const displayVideo = document.getElementById('displayVideo')
 let slideId = 0;
-let intervalId;
+let intervalId = null;
 
 
 window.addEventListener("DOMContentLoaded", function () {
@@ -20,19 +20,30 @@ window.addEventListener("DOMContentLoaded", function () {
     startSlides();
 })
 
-for (let i = 0; i < displaySlide.length; i++){
-    displaySlide[i].addEventListener("mouseenter", () => clearInterval(intervalId))
-    displaySlide[i].addEventListener("mouseleave", () => startSlides())
-}
+displaySlide.forEach(display => {
+    display.addEventListener("mouseenter", () => stopSlides());
+    display.addEventListener("mouseleave", () => startSlides());
+});
 
 function startSlides(){
-    intervalId = setInterval(() => {
-        nextSlide()
-    }, 5000)
+    if (intervalId === null){
+        intervalId = setInterval(() => {
+            nextSlide()
+        }, 5000)
+        // console.log('started')
+    }
+}
+
+function stopSlides(){
+    if (intervalId !== null){
+        clearInterval(intervalId);
+        intervalId = null;
+        // console.log('stopped')
+    }
 }
 
 function showSlide(slideIdIn) {
-    clearInterval(intervalId);
+    stopSlides();
     startSlides();
     if (slideIdIn < 0) slideIdIn = slides.length - 1;
     if (slideIdIn >= slides.length) slideIdIn = 0;
@@ -51,16 +62,21 @@ function showSlide(slideIdIn) {
         displaySlide[0].alt = slides[slideIdIn].alt
         displaySlide[0].src = slides[slideIdIn].src
         displaySlide[1].removeAttribute('src')
+        displaySlide[1].load()
 
     }
 }
 
 function nextSlide() {
+    stopSlides();
+    startSlides();
     slides[slideId].classList.remove("showSlide");
     showSlide(slideId + 1);
 }
 
 function prevSlide() {
+    stopSlides();
+    startSlides();
     slides[slideId].classList.remove("showSlide");
     showSlide(slideId - 1);
 }
