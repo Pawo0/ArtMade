@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/logo.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div id="header--logo">
+        <img src="images/logo.webp" alt="logo" width="100px" height="100px">
+        <h1>ArtMade</h1>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    <nav id="header--nav">
+        <ul>
+            <li><a href="index.html">Główna</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="gallery.html">Galeria</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="justify">
+    <article id="article--contact">
+        <form action="" method="POST" id="article--form">
+            <label for="email">E-mail</label>
+            <input type="text" placeholder="sample@gmail.com" id="email"><br>
+
+            <label for="topic">Temat</label>
+            <select id="topic">
+                <option>Wybierz temat</option>
+                <option>Zamówienie indywidualne</option>
+                <option>Dodatkowe informacje o produkcie</option>
+                <option>Reklamacja</option>
+            </select><br>
+
+            <label for="message">Wiadomość</label><br>
+            <textarea id="message" placeholder="Treść wiadomości" cols="35" rows="4"></textarea><br>
+
+            <input type="submit" value="Prześlij" id="submitBtn">
+
+
+
+        </form>
+    </article>
+</main>
+
+<footer><p>&copy Paweł Czajczyk</p></footer>
+
+<script src="script.js"></script>
+</body>
+</html>

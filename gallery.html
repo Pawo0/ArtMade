@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/logo.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div id="header--logo">
+        <img src="images/logo.webp" alt="logo" width="100px" height="100px">
+        <h1>ArtMade</h1>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    <nav id="header--nav">
+        <ul>
+            <li><a href="index.html">Główna</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="gallery.html">Galeria</a></li>
+        </ul>
+    </nav>
+</header>
+<main id="main--gallery">
+    <div class="slides">
+        <img id="displaySlide" src="images/gandalf.jpg" alt="gandalf">
+        <button class="slideController" id="prev" onclick="prevSlide()">&#10094</button>
+        <button class="slideController" id="next" onclick="nextSlide()">&#10095</button>
+    </div>
+    <div id="photos">
+        <img src="images/jednorozec-natalka.jpg" class="slide" alt="gandalf" onclick="showSlide(0)">
+        <img src="images/gandalf.jpg" class="slide" alt="gandalf" onclick="showSlide(1)">
+        <img src="images/kroliczek-sara.jpg" class="slide" alt="gandalf" onclick="showSlide(2)">
+        <img src="images/lisek-aida.jpg" class="slide" alt="gandalf" onclick="showSlide(3)">
+        <img src="images/meduza-grzechotka.jpeg" class="slide" alt="gandalf" onclick="showSlide(4)">
+        <img src="images/mis-puchatek.jpg" class="slide" alt="gandalf" onclick="showSlide(5)">
+        <img src="images/mis-tadeusz.jpg" class="slide" alt="gandalf" onclick="showSlide(6)">
+        <img src="images/slon-rozalia.jpg" class="slide" alt="gandalf" onclick="showSlide(7)">
+        <img src="images/swiateczny-renifer.jpg" class="slide" alt="gandalf" onclick="showSlide(8)">
+    </div>
+</main>
+
+<footer><p>&copy Paweł Czajczyk</p></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
