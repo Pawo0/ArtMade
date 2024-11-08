@@ -106,7 +106,7 @@ header {
 }
 
 main {
-    background-image: url("images/background.jpg");
+    background-image: url("images/background-lite.jpg");
     background-size: cover;
     flex: 1;
     display: flex;
@@ -116,9 +116,10 @@ main {
 #article--about {
     background-color: rgba(255, 255, 255, 0.7);
     width: 60vw;
+    max-width: 1000px;
     padding: 20px;
     max-height: 60vh;
-    overflow: scroll;
+    overflow: auto;
     margin: 20px;
 }
 
@@ -173,6 +174,7 @@ footer {
     margin: 50px;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .slide {
@@ -195,12 +197,20 @@ footer {
     width: 100%;
     height: 100%;
     margin: auto;
+    /*display: none;*/
 }
 
-img.showSlide {
-    display: block;
+.slides video {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: none;
+}
+
+img.showSlide, video.showSlide {
     animation-name: fades;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
+    box-shadow: 5px 5px 4px #252222;
 }
 
 .slideController {
@@ -222,11 +232,11 @@ img.showSlide {
 }
 
 #prev {
-    left: 0;
+    left: 5px;
 }
 
 #next {
-    right: 0;
+    right: 5px;
 }
 
 @keyframes fades {

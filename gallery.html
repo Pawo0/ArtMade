@@ -28,14 +28,16 @@
 </header>
 <main id="main--gallery">
     <div class="slides">
-        <img id="displaySlide" src="images/gandalf.jpg" alt="gandalf">
+        <img class="displaySlide" id="displayImg" src="images/gandalf.jpg" alt="gandalf">
+        <video class="displaySlide" id="displayVideo" autoplay="" loop></video>
         <button class="slideController" id="prev" onclick="prevSlide()">&#10094</button>
         <button class="slideController" id="next" onclick="nextSlide()">&#10095</button>
     </div>
     <div id="photos">
         <img src="images/jednorozec-natalka.jpg" class="slide" alt="gandalf" onclick="showSlide(0)">
-        <img src="images/gandalf.jpg" class="slide" alt="gandalf" onclick="showSlide(1)">
-        <img src="images/kroliczek-sara.jpg" class="slide" alt="gandalf" onclick="showSlide(2)">
+        <!--        <img src="images/gandalf.jpg" class="slide" alt="gandalf" onclick="showSlide(1)">-->
+        <video id="test1" src="images/gandalf_sax.mp4" autoplay loop muted class="slide" onclick="showSlide(1)"></video>
+        <img id="test2" src="images/kroliczek-sara.jpg" class="slide" alt="gandalf" onclick="showSlide(2)">
         <img src="images/lisek-aida.jpg" class="slide" alt="gandalf" onclick="showSlide(3)">
         <img src="images/meduza-grzechotka.jpeg" class="slide" alt="gandalf" onclick="showSlide(4)">
         <img src="images/mis-puchatek.jpg" class="slide" alt="gandalf" onclick="showSlide(5)">
