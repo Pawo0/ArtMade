@@ -5,7 +5,7 @@
     <title>Contact</title>
     <link href="style.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/logo.webp">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,16 +34,18 @@
                 <label for="email" class="form--labels">E-mail:</label>
                 <input type="text" placeholder="sample@gmail.com" id="email" class="form--content">
             </div>
+            <span class="error-message" id="email-error"></span>
 
             <div class="form-row">
                 <label for="topic" class="form--labels">Temat:</label>
                 <select id="topic" class="form--content">
-                    <option>Wybierz temat</option>
-                    <option>Zamówienie indywidualne</option>
-                    <option>Dodatkowe informacje o produkcie</option>
-                    <option>Reklamacja</option>
+                    <option value="">Wybierz temat</option>
+                    <option value="ind">Zamówienie indywidualne</option>
+                    <option value="info">Dodatkowe informacje o produkcie</option>
+                    <option value="reklamacja">Reklamacja</option>
                 </select>
             </div>
+            <span class="error-message" id="topic-error"></span>
 
             <div class="form-row">
                 <label for="message" class="form--labels">Wiadomość:</label>
@@ -52,6 +54,7 @@
                     <div id="character-counter"><span id="character-left">0</span>/120</div>
                 </div>
             </div>
+            <span class="error-message" id="message-error"></span>
 
             <input type="submit" value="Prześlij" id="submitBtn">
 

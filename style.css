@@ -186,11 +186,12 @@ main {
 }
 
 @media (max-width: 666px) {
-    .form-row{
+    .form-row {
         flex-direction: column;
         align-items: center;
     }
-    .form--labels{
+
+    .form--labels {
         text-align: center;
     }
 }
@@ -261,6 +262,20 @@ textarea:focus {
 
 #submitBtn:hover {
     filter: brightness(110%);
+}
+
+#article--form > span {
+    font-size: 0.5em;
+    text-align: right;
+    color: red;
+    height: 15px;
+}
+#message-error{
+    margin: -15px 0 15px 0;
+}
+
+.errorBorder{
+    border: 1px solid red;
 }
 
 .justify {
