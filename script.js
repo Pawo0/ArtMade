@@ -15,11 +15,6 @@ menuBtn.addEventListener('click', () => changeVis())
 
 window.addEventListener('click', (e) => {
     const {left, right, top, bottom} = menuUl.getBoundingClientRect();
-    // console.log(e.clientX >= left)
-    // console.log(e.clientX <= right)
-    // console.log(e.clientY <= top)
-    // console.log(e.clientY >= bottom)
-    // console.log('-------------------')
     if (menuActive && !(e.clientX >= left && e.clientX <= right && e.clientY >= top && e.clientY <= bottom)) {
         changeVis()
     }

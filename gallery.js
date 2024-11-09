@@ -15,8 +15,8 @@ window.addEventListener("DOMContentLoaded", function () {
 })
 
 displaySlide.forEach(display => {
-    display.addEventListener("mouseenter", () => stopSlides());
-    display.addEventListener("mouseleave", () => startSlides());
+    display.addEventListener("mouseenter", stopSlides);
+    display.addEventListener("mouseleave", startSlides);
 });
 
 function startSlides() {
