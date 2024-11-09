@@ -29,23 +29,31 @@
 <main class="justify">
     <article id="article--contact">
         <form action="" method="POST" id="article--form">
-            <label for="email">E-mail</label>
-            <input type="text" placeholder="sample@gmail.com" id="email"><br>
 
-            <label for="topic">Temat</label>
-            <select id="topic">
-                <option>Wybierz temat</option>
-                <option>Zamówienie indywidualne</option>
-                <option>Dodatkowe informacje o produkcie</option>
-                <option>Reklamacja</option>
-            </select><br>
+            <div class="form-row">
+                <label for="email" class="form--labels">E-mail:</label>
+                <input type="text" placeholder="sample@gmail.com" id="email" class="form--content">
+            </div>
 
-            <label for="message">Wiadomość</label><br>
-            <textarea id="message" placeholder="Treść wiadomości" cols="35" rows="4"></textarea><br>
+            <div class="form-row">
+                <label for="topic" class="form--labels">Temat:</label>
+                <select id="topic" class="form--content">
+                    <option>Wybierz temat</option>
+                    <option>Zamówienie indywidualne</option>
+                    <option>Dodatkowe informacje o produkcie</option>
+                    <option>Reklamacja</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="message" class="form--labels">Wiadomość:</label>
+                <div class="form--content" id="textareaRow">
+                    <textarea id="message" placeholder="Treść wiadomości" wrap="hard" maxlength="120"></textarea>
+                    <div id="character-counter"><span id="character-left">0</span>/120</div>
+                </div>
+            </div>
 
             <input type="submit" value="Prześlij" id="submitBtn">
-
-
 
         </form>
     </article>
@@ -54,5 +62,6 @@
 <footer><p>&copy Paweł Czajczyk</p></footer>
 
 <script src="script.js"></script>
+<script src="contact.js"></script>
 </body>
 </html>
