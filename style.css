@@ -42,7 +42,7 @@ header {
     margin-left: 15px;
     font-size: 1.5em;
     border-left: 3px solid black;
-    background-color: #A98071;
+    background-color: #ad9578;
     border-radius: 25px;
     font-weight: 600;
 }
@@ -60,7 +60,7 @@ header {
 
 
 #menu-toggle {
-    background-color: #A98071;
+    background-color: #ad9578;
     display: none;
     font-size: 1.5em;
     /*background: none;*/
@@ -113,6 +113,8 @@ main {
     align-items: center;
 }
 
+/*main site*/
+
 #article--about {
     background-color: rgba(255, 255, 255, 0.7);
     width: 60vw;
@@ -123,37 +125,107 @@ main {
     margin: 20px;
 }
 
+/*formularz*/
 #article--contact {
     background-color: rgba(255, 255, 255, 0.8);
     width: 50vw;
     padding: 20px;
     max-height: 60vh;
-    overflow: scroll;
+    overflow: auto;
     margin: 20px;
     align-self: center;
 }
 
-#main--gallery {
-    display: block;
-    padding: 15px;
-    background-image: none;
-    background-color: #dde2eb;
+#article--form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 0.5rem;
 }
+
+.form-row {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form--labels {
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+    min-width: 150px;
+}
+
+.form--content {
+    flex: 2;
+    box-sizing: border-box;
+    width: 100%;
+}
+
 
 #article--form {
     font-size: 1.5em;
 }
 
-#article--form input {
+#article--form input[type=text] {
     padding: 8px;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: inset -5px -5px 4px rgba(0, 0, 0, 0.1);
+}
+
+#article--form input[type=text]:focus {
+    border-color: #a98071;
 }
 
 #article--form select {
     padding: 8px;
+    /*background-color: #ad9578;*/
 }
 
-#article--form textarea {
+#textareaRow {
+    /*position: relative;*/
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 8px 8px 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+#textareaRow textarea {
+    margin-left: 5px;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 10px;
     resize: none;
+    outline: none;
+    box-shadow: inset -5px -5px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+
+textarea:focus {
+    border-color: #a98071;
+}
+
+#character-counter {
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*bottom: 6px;*/
+    font-size: 0.5em;
+    color: gray;
+}
+
+#submitBtn {
+    padding: 10px;
+    background-color: #ad9578;
+    border-radius: 10px;
+}
+
+#submitBtn:hover {
+    filter: brightness(110%);
 }
 
 .justify {
@@ -168,6 +240,14 @@ footer {
     width: 100vw;
 }
 
+
+#main--gallery {
+    display: block;
+    padding: 15px;
+    background-image: none;
+    background-color: #dde2eb;
+}
+
 /* slider */
 #photos {
     display: flex;
@@ -180,6 +260,7 @@ footer {
 .slide {
     height: 120px;
     width: 120px;
+    cursor: pointer;
 }
 
 .slides {
