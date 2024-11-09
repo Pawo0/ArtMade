@@ -21,7 +21,8 @@ header {
 #header--logo {
     display: flex;
 }
-#header--logo img{
+
+#header--logo img {
     width: 100px;
     height: 100px;
 }
@@ -86,6 +87,11 @@ header {
 
 }
 
+@media (max-width: 420px) {
+    #header--logo h1 {
+        display: none;
+    }
+}
 
 @media (max-width: 820px) {
     #menu-toggle {
@@ -163,7 +169,7 @@ main {
 .form-row {
     align-items: flex-start;
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
 .form--labels {
@@ -179,6 +185,16 @@ main {
     width: 100%;
 }
 
+@media (max-width: 666px) {
+    .form-row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .form--labels{
+        text-align: center;
+    }
+}
+
 
 #article--form {
     font-size: 1.5em;
@@ -188,7 +204,7 @@ main {
     padding: 8px;
     outline: none;
     border-radius: 10px;
-    box-shadow: inset -5px -5px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #article--form input[type=text]:focus {
@@ -218,7 +234,7 @@ main {
     border-radius: 10px;
     resize: none;
     outline: none;
-    box-shadow: inset -5px -5px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 
@@ -239,6 +255,8 @@ textarea:focus {
     padding: 10px;
     background-color: #ad9578;
     border-radius: 10px;
+    font-weight: 600;
+    font-size: 1em;
 }
 
 #submitBtn:hover {
